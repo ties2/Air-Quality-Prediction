@@ -1,0 +1,61 @@
+# Delhi-specific configuration
+# Known for severe winter air pollution
+
+city:
+  name: "Delhi"
+  country: "IN"
+  timezone: "Asia/Kolkata"
+  
+  # Delhi's pollution characteristics
+  characteristics:
+    - "High PM2.5 during winter (Nov-Feb) due to crop burning and inversions"
+    - "Traffic-related NO2 peaks during rush hours (8-10 AM, 5-8 PM)"
+    - "Industrial emissions from neighboring regions"
+    - "Dust storms in pre-monsoon season (Apr-Jun)"
+
+# OpenAQ locations in Delhi
+locations:
+  priority:  # Well-maintained sensors with good coverage
+    - "Anand Vihar"
+    - "Punjabi Bagh"
+    - "RK Puram"
+    - "Mandir Marg"
+    - "IGI Airport"
+
+# Seasonal considerations for CMS
+seasonality:
+  # Winter (Oct-Feb): High pollution, rapid changes
+  winter:
+    months: [10, 11, 12, 1, 2]
+    cms_frequencies: [0.15, 0.5, 0.85]  # Faster adaptation
+    expected_pm25_range: [100, 500]
+  
+  # Summer (Mar-Jun): Dust events, moderate pollution
+  summer:
+    months: [3, 4, 5, 6]
+    cms_frequencies: [0.1, 0.5, 0.9]  # Standard
+    expected_pm25_range: [50, 200]
+  
+  # Monsoon (Jul-Sep): Lowest pollution, washout effect
+  monsoon:
+    months: [7, 8, 9]
+    cms_frequencies: [0.05, 0.4, 0.95]  # Slower long-term, faster short-term
+    expected_pm25_range: [20, 100]
+
+# Alert thresholds (India's AQI standards)
+alerts:
+  pm25:
+    good: 30
+    satisfactory: 60
+    moderate: 90
+    poor: 120
+    very_poor: 250
+    severe: 380
+  
+  pm10:
+    good: 50
+    satisfactory: 100
+    moderate: 250
+    poor: 350
+    very_poor: 430
+    severe: 500

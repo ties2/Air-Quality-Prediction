@@ -1,0 +1,27 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="ignoredPackages">
+        <list>
+          <option value="cmake" />
+          <option value="eval_type_backport" />
+          <option value="lit" />
+          <option value="numcodecs" />
+          <option value="nvidia-cublas-cu11" />
+          <option value="nvidia-cuda-cupti-cu11" />
+          <option value="nvidia-cuda-nvrtc-cu11" />
+          <option value="nvidia-cuda-runtime-cu11" />
+          <option value="nvidia-cudnn-cu11" />
+          <option value="nvidia-cufft-cu11" />
+          <option value="nvidia-curand-cu11" />
+          <option value="nvidia-cusolver-cu11" />
+          <option value="nvidia-cusparse-cu11" />
+          <option value="nvidia-nccl-cu11" />
+          <option value="nvidia-nvtx-cu11" />
+          <option value="opencv-python-headless" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
